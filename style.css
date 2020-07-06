@@ -1,7 +1,7 @@
 @keyframes colourFade {
-  0% {background-color: red;}
-  50% {background-color: green;}
-  100% {background-color: red;}
+  0% {background-color: #FFFFFF;}
+  50% {background-color: #333333;}
+  100% {background-color: #FFFFFF;}
 }
 
 @keyframes verticalShrink {
@@ -156,6 +156,29 @@
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);}    
   }
+
+@keyframes boxShadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 10px 1px #AAAAFF; 
+box-shadow: 0px 0px 10px 1px #AAAAFF;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 10px 13px #AAAAFF; 
+box-shadow: 0px 0px 10px 13px #AAAAFF;
+  }
+  100%{
+    -webkit-box-shadow:0px 0px 10px 1px #AAAAFF; 
+    box-shadow: 0px 0px 10px 1px #AAAAFF;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 html{
@@ -202,7 +225,7 @@ h1{
   height: 140px;
 }
 #box-1 {
-  background-color: red;
+  background-color: #FFFFFF;
   width: 120px;
   height: 120px;
 }
@@ -213,6 +236,7 @@ h1{
 
 #box-2 {
   background-color: orangered;
+  background-image: URL("2.jpg");
   width: 120px;
   height: 120px;
 }
@@ -223,6 +247,7 @@ h1{
 
 #box-3 {
     background-color: violet;
+    background-image: URL("3.jpg");
     width: 120px;
     height: 120px;
 }
@@ -233,6 +258,7 @@ h1{
 
 #box-4 {
     background-color: yellow;
+    background-image: URL("4.jpg");
     width: 120px;
     height: 120px;
 }
@@ -244,6 +270,7 @@ h1{
 
 #box-5 {
     background-color: green;
+    background-image: URL("5.jpg");
     width: 120px;
     height: 120px;
 }
@@ -255,6 +282,7 @@ h1{
 
 #box-6 {
     background-color: black;
+    background-image: URL("6.jpg");
     width: 120px;
     height: 120px;
 }
@@ -267,6 +295,7 @@ h1{
 
 #box-7 {
   background-color: dodgerblue;
+  background-image: URL("7.jpg");
   width: 120px;
   height: 120px;
 }
@@ -279,6 +308,7 @@ animation-timing-function: ease-in;
 
 #box-8 {
   background-color: red;
+  background-image: URL("8.jpg");
   width: 120px;
   height: 120px;
 }
@@ -291,6 +321,7 @@ animation-timing-function: linear;
 
 #box-9 {
   background-color: orangered;
+  background-image: URL("9.jpg");
   width: 120px;
   height: 120px;
 }
@@ -303,6 +334,7 @@ animation-timing-function: linear;
 
 #box-10 {
   background-color: violet;
+  background-image: URL("10.jpg");
   width: 120px;
   height: 120px;
 }
@@ -315,11 +347,36 @@ animation-timing-function: cubic-bezier(.38,2.03,.62,.66);
 
 #box-11 {
   background-color: yellow;
+  background-image: URL("11.jpg");
   width: 120px;
   height: 120px;
 }
 #box-11:hover{
   animation-name: seeSaw;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#box-12 {
+  background-image: URL("11.jpg");
+  width: 120px;
+  height: 120px;
+}
+#box-12:hover{
+  animation-name: boxShadow;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+#box-13{
+  background-image: URL("12.jpg");
+  width: 120px;
+  height: 120px;
+}
+#box-13:hover{
+  animation-name: fadeOut;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
